@@ -295,6 +295,23 @@
       text-decoration: none;
       box-shadow: 0 3px 6px rgba(158, 27, 27, 0.2);
     }
+    .upi-pay-btn {
+  display: inline-block;
+  background-color: #d32f2f;
+  color: #ffffff;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 2px solid #ffd700;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+}
+.upi-pay-btn:active {
+  transform: scale(0.98);
+}
+
   </style>
 </head>
 <body>
@@ -389,11 +406,16 @@
         </p>
 
         <!-- QR Code Placeholder (Replace 'src' with your real UPI QR code image) -->
-        <div class="qr-container">
-          <img src="qr1.jpg" alt="दान हेतु UPI
-        </div>
-          <span class="upi-id">UPI ID: pandal@upi</span>
-        </div>
+              <div class="qr-container">
+        <!-- Your QR Code image -->
+        <img src="qr1.jpg" alt="दान हेतु UPI QR कोड" style="max-width: 220px; border-radius: 12px; display: block; margin: 0 auto;">
+
+        <!-- The Clickable Pay Button -->
+        <a href="upi://pay?pa=8450887191@axl&pn=Durga%20Puja%20Samiti&cu=INR" class="upi-pay-btn">
+          📱 Pay via UPI (PhonePe / GPay / Paytm)
+        </a>
+      </div>
+
 
         <p class="thank-you-note">
           आपके इस पावन दान व अमूल्य सहयोग के लिए समिति आपका कोटि-कोटि धन्यवाद करती है। माँ दुर्गा आप पर कृपा बनाए रखें।
