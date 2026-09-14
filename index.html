@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>श्री दुर्गा माता पंडाल | स्वागतम</title>
+  
+  <!-- Google Fonts for crisp Hindi & Festive typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Yatra+One&family=Tiro+Devanagari+Hindi:ital@0;1&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-red: #9e1b1b;
+      --deep-red: #770e0e;
+      --gold: #d4af37;
+      --light-gold: #fdf6e2;
+      --bg-cream: #faf7f2;
+      --card-bg: #ffffff;
+      --text-dark: #2c2727;
+      --text-muted: #665b5b;
+      --border-color: #eeddbb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Tiro Devanagari Hindi', 'Poppins', serif;
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      line-height: 1.6;
+      text-align: center;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* Top Decorative Festive Bar */
+    .top-festive-stripe {
+      height: 6px;
+      background: linear-gradient(90deg, var(--deep-red), var(--gold), var(--deep-red));
+    }
+
+    /* Header Section */
+    header {
+      background: linear-gradient(180deg, #fff 0%, var(--bg-cream) 100%);
+      padding: 36px 16px 24px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .durga-motif {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--light-gold);
+      border: 1.5px solid var(--gold);
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(212, 175, 55, 0.2);
+    }
+
+    .durga-motif svg {
+      width: 44px;
+      height: 44px;
+      fill: var(--primary-red);
+    }
+
+    .pandal-title {
+      font-family: 'Yatra One', cursive;
+      font-size: 2.2rem;
+      color: var(--primary-red);
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .sub-badge {
+      display: inline-block;
+      background: var(--light-gold);
+      color: var(--deep-red);
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 4px 16px;
+      border-radius: 20px;
+      border: 1px solid var(--gold);
+    }
+
+    /* Card Box Base */
+    .section-card {
+      background: var(--card-bg);
+      margin: 20px 0;
+      padding: 24px 18px;
+      border-radius: 14px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 3px 12px rgba(158, 27, 27, 0.05);
+    }
+
+    .section-title {
+      font-family: 'Rozha One', serif;
+      font-size: 1.45rem;
+      color: var(--deep-red);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .section-title::before,
+    .section-title::after {
+      content: "•";
+      color: var(--gold);
+      font-size: 1.3rem;
+    }
+
+    /* Welcome Section */
+    .welcome-text {
+      font-size: 1.15rem;
+      color: var(--text-dark);
+      font-weight: 500;
+      line-height: 1.7;
+    }
+
+    .shlok {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      color: var(--primary-red);
+      font-style: italic;
+    }
+
+    /* Photo Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .gallery-item {
+      background: #f2ece4;
+      border-radius: 10px;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      border: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.03);
+    }
+
+    .placeholder-label {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      padding: 8px;
+    }
+
+    /* Committee Section */
+    .committee-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .member-card {
+      background: #fff9f5;
+      padding: 14px;
+      border-radius: 10px;
+      border-left: 4px solid var(--primary-red);
+      border-top: 1px solid #f0e6dd;
+      border-right: 1px solid #f0e6dd;
+      border-bottom: 1px solid #f0e6dd;
+      text-align: left;
+    }
+
+    .role-badge {
+      font-size: 0.8rem;
+      color: var(--deep-red);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .member-name {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #1a1a1a;
+    }
+
+    .member-name-en {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Donation Section */
+    .donation-box {
+      border: 1.5px dashed var(--gold);
+      background: #fffdfa;
+      border-radius: 12px;
+      padding: 20px 14px;
+    }
+
+    .qr-container {
+      margin: 14px auto;
+      max-width: 180px;
+      padding: 8px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .qr-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .upi-id {
+      font-family: 'Poppins', monospace;
+      font-weight: 600;
+      font-size: 0.9rem;
+      background: var(--light-gold);
+      color: var(--deep-red);
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 6px;
+      margin-top: 6px;
+      user-select: all;
+    }
+
+    .thank-you-note {
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      margin-top: 12px;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 30px;
+      padding: 28px 16px 36px;
+      background: linear-gradient(180deg, var(--bg-cream) 0%, #f0e6da 100%);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .footer-mantra {
+      font-size: 1.25rem;
+      color: var(--primary-red);
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .footer-title {
+      font-family: 'Yatra One', cursive;
+      font-size: 1.05rem;
+      color: var(--text-dark);
+    }
+
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 16px;
+      background: var(--primary-red);
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.85rem;
+      padding: 8px 18px;
+      border-radius: 20px;
+      text-decoration: none;
+      box-shadow: 0 3px 6px rgba(158, 27, 27, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-festive-stripe"></div>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <!-- Sacred Durga Trisula / Eye Motif Icon -->
+      <div class="durga-motif" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <!-- Stylized Durga Eye / Third Eye & Bindi -->
+          <circle cx="12" cy="7" r="1.5"/>
+          <path d="M12 9.5 C7 9.5 3 13 3 13 C3 13 7 16.5 12 16.5 C17 16.5 21 13 21 13 C21 13 17 9.5 12 9.5 Z"/>
+          <circle cx="12" cy="13" r="1.8" fill="#fff"/>
+        </svg>
+      </div>
+
+      <h1 class="pandal-title">श्री दुर्गा माता पंडाल</h1>
+      <span class="sub-badge">शारदीय दुर्गोत्सव</span>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Welcome Message -->
+    <section class="section-card">
+      <div class="welcome-text">
+        माँ दुर्गा के पावन आगमन पर आप सभी भक्तों एवं श्रद्धालुओं का हार्दिक स्वागत एवं अभिनंदन है।
+      </div>
+      <div class="shlok">
+        "सर्वमंगल मांगल्ये शिवे सर्वार्थ साधिके। शरण्ये त्र्यम्बके गौरि नारायणि नमोऽस्तु ते॥"
+      </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="section-card">
+      <h2 class="section-title">पंडाल की झलकियां</h2>
+      <p style="font-size: 0.85rem; color: var(--text-muted);">पूजा एवं पंडाल के कुछ मनमोहक दृश्य</p>
+
+      <div class="gallery-grid">
+        <!-- Photo Item 1 -->
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1602102980998-356b46ea675f?auto=format&fit=crop&w=600&q=80" alt="माँ दुर्गा प्रतिमा">
+        </div>
+        <!-- Photo Item 2 -->
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=600&q=80" alt="पंडाल सजावट">
+        </div>
+        <!-- Photo Item 3 (Placeholder for members/updates) -->
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="आरती एवं सांस्कृतिक कार्यक्रम">
+        </div>
+        <!-- Photo Item 4 -->
+        <div class="gallery-item">
+          <div class="placeholder-label">
+            <span>📷</span><br>
+            नई तस्वीरें जल्द जोड़ी जाएंगी
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Committee Section -->
+    <section class="section-card">
+      <h2 class="section-title">आयोजन समिति</h2>
+      <div class="committee-grid">
+        
+        <div class="member-card">
+          <span class="role-badge">प्रबंधक (Manager)</span>
+          <div class="member-name">मिथुन विश्वास</div>
+          <div class="member-name-en">Mithun Biswas</div>
+        </div>
+
+        <div class="member-card">
+          <span class="role-badge">वित्त प्रभारी (Financer)</span>
+          <div class="member-name">ईश्वर प्रताप</div>
+          <div class="member-name-en">Ishwar Pratap</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section class="section-card">
+      <h2 class="section-title">चंदा दें / दान करें</h2>
+      
+      <div class="donation-box">
+        <p style="font-size: 0.95rem; font-weight: 500;">
+          पूजा एवं भव्य आयोजन को सफल बनाने हेतु अपना सहयोग प्रदान करें
+        </p>
+
+        <!-- QR Code Placeholder (Replace 'src' with your real UPI QR code image) -->
+        <div class="qr-container">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=upi://pay?pa=example@upi&pn=DurgaPujaPandal" alt="दान हेतु UPI QR कोड">
+        </div>
+
+        <div>
+          <span class="upi-id">UPI ID: pandal@upi</span>
+        </div>
+
+        <p class="thank-you-note">
+          आपके इस पावन दान व अमूल्य सहयोग के लिए समिति आपका कोटि-कोटि धन्यवाद करती है। माँ दुर्गा आप पर कृपा बनाए रखें।
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-mantra">जय माता दी 🙏</div>
+      <div class="footer-title">श्री दुर्गा माता पंडाल</div>
+      <br>
+      <button class="share-btn" onclick="navigator.share ? navigator.share({title: document.title, url: window.location.href}) : alert('लिंक कॉपी करने के लिए ब्राउज़र बार से कॉपी करें!');">
+        🔗 लिंक शेयर करें
+      </button>
+    </div>
+  </footer>
+
+</body>
+</html>
